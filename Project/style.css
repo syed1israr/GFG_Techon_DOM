@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100vh;
+  back
+  width: 100%;
+}
+
+#cursor {
+  height: 2vw;
+  width: 2vw;
+  background-color: #fafdfa;
+  color: aliceblue;
+  border-radius: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 99;
+  transition: all linear 0.2s;
+  mix-blend-mode: difference;
+}
+
+#cursor h1 {
+  font-size: 1vw;
+}
+
+#main {
+  background-color: #0e0c0c;
+}
+
+#nav {
+  width: 100%;
+  padding: 1vw 2vw;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f7e4e4;
+}
+
+#part2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3vw;
+}
+
+#part2 h1 {
+  font-size: 1.3vw;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#part2 i {
+  font-size: 2vw;
+  font-weight: 100;
+}
+
+#nav svg path {
+  fill: #0e0808;
+}
+
+#page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: #fae4e4;
+  color: aliceblue;
+  display: flex;
+  background-size: cover;
+  background-position: center center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+#elem {
+  width: 100%;
+  position: relative;
+
+}
+
+#elem h2 {
+  font-size: 7.5vw;
+  font-weight: 100;
+  position: relative;
+  z-index: 99;
+  line-height: 6vw;
+
+  font-family: "Gilroy";
+}
+
+#elem h2:hover {
+  color: #000;
+}
+
+#moving {
+  width: 100%;
+  white-space: nowrap;
+  padding: 0.5vw;
+  background-color: #f5e41b;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%) scaleY(0);
+  transition: all ease 0.5s;
+}
+
+#elem #movingin {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: moving;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+}
+
+#elem #movingin h5 {
+  display: inline-block;
+  font-size: 1.3vw;
+  text-transform: uppercase;
+  margin-right: 1vw;
+  color: #000;
+  transition: all ease 0.5s;
+  transition-delay: 0.5s;
+}
+
+#elem:hover #moving {
+
+  transform: translate(0%, -50%) scaleY(1);
+}
+
+@keyframes moving {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(-100px);
+  }
+}
+
+#nav h1:hover {
+  text-decoration: underline;
+}
